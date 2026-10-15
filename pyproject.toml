@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "employee-agent-system"
+version = "1.0.0"
+description = "Production-minded Employee and Department Information Multi-Agent System built with LangGraph, LangChain, and SQLite."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langgraph==0.2.16",
+    "langgraph-checkpoint-sqlite==1.0.1",
+    "langchain-core==0.2.38",
+    "langchain-openai==0.1.23",
+    "pydantic>=1.10.4,<3.0.0",
+    "python-dotenv==1.2.4",
+    "requests==2.32.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest==8.3.2",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v"

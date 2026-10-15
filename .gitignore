@@ -1,0 +1,35 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# SQLite Databases & Journals
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+data/*.db
+!data/.gitkeep
+
+# Application Logs
+logs/*.log
+logs/*.log.*
+!logs/.gitkeep
+
+# Python Bytecode & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual Environments & Packaging
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
